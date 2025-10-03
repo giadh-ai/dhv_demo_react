@@ -1,4 +1,5 @@
 import "./styles.css";
+// @ts-ignore
 import products from "./data/product.js";
 
 export default function App() {
@@ -20,7 +21,7 @@ export default function App() {
         })}
       </div>
       <div className="grid grid-cols-4 gap-4">
-        {products.map((item) => (
+        {products.map((item: any) => (
           <div key={item.id} className="border p-4 rounded shadow">
             <img src={item.image} alt={item.title} className="h-40 mx-auto" />
             <h2 className="text-lg font-semibold mt-2">{item.title}</h2>
@@ -32,3 +33,4 @@ export default function App() {
     </div>
   );
 }
+
